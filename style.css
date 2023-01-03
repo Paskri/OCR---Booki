@@ -589,6 +589,15 @@ h3 {
     }
 
 }
+/* break point intermédiaire pour popular accommodation items */
+@media screen and (max-width: 880px) {
+    .popular {
+        flex-wrap: wrap;
+    }
+    .popular .accommodations-item {
+        width: 48%;
+   } 
+}
 /* break point intermédiaire pour accommodations items */
 @media screen and (max-width: 850px){
 
