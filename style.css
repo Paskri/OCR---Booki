@@ -22,11 +22,16 @@ body {
 
 a {
     text-decoration: none;
-    color: black
+    color: black;
+    transition: transform .3s;
 }
 
 a:visited {
     color: black;
+}
+
+a:hover {
+    transform: scale(1.02); 
 }
 
 h1, h2, h3 {
@@ -39,10 +44,13 @@ h1 {
 
 h2 {
     font-size: 1.375rem;
+    line-height: 1.5rem ;
+    height: 1.625rem;
 }
 
 h3 {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.173rem;
 }
 
 .main-wrapper {
@@ -243,16 +251,13 @@ h3 {
 }
 
 .accommodations-wrapper h2 {
-    font-size: 1.375rem;
-    line-height: 24px;
-    height: 26px;
-    margin: 0 0 23px 0;
+    margin: 0 0 22px 0;
 }
 
 .accommodations-container {
     justify-content: space-between;
     width: 66%;
-    background-color: #F2F2F2; /* #F2F2F2 
+    background-color:  #F2F2F2 ; /* #F2F2F2 
     border: 1px solid black;*/
     padding: 40px;
     border-radius: 20px;
@@ -273,10 +278,10 @@ h3 {
     flex-wrap: wrap;
     flex-direction: column;
     width: 31%;
-    background-color: white;
-    margin-bottom: 32px;
+    background-color: #FFFFFF; /* #FFFFFF */
+    margin-bottom: 35px;
     border-radius: 20px;
-    padding: 6px;
+    padding: 4px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
@@ -284,46 +289,44 @@ h3 {
     flex: none;
     display: flex;
     width: 100%;
-    height: 120px;
+    height: 114px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
 }
 
 .accommodations-item h3 {
-    line-height: 1.15rem;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 5px 0 0 10px
+    margin: 10px 0 0 10px
 }
 
-.accommodations-item p {
+/*.accommodations-item p {
     line-height: 1.15rem;
     font-size: 0.90rem;
     margin: 2px 0 0 10px;
-}
+}*/
 
 .accommodations-item span {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0 0 0 15px
+    line-height: 1rem;
+    font-size: 0.875rem;
+    margin: 4px 0 0 10px;
 }
 
 .accommodations-item .stars {
-    margin: 1px 0 0px 10px;
+    margin: 5px 0 0px 10px;
     font-size: 0.7rem;  
 }
 
 .accommodations-item .stars i {
-    color: #0065fc;   
+    color: #0065fc; 
 }
 
 .display-more {
-    margin: 12px 0 0 3px;
+    margin: 10px 0 0 3px;
+    font-size: 1.125rem;
 }
 
 .popular-container {
     width: 31.5%;
-    background-color: #F2F2F2; /* #F2F2F2 
+    background-color: #F2F2F2 ; /* #F2F2F2 
     border: 1px solid black;*/
     border-radius: 20px;
     padding: 40px 40px 0 40px;
@@ -333,7 +336,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 23px;
+    margin-bottom: 24px;
 }
 
 .popular-title-container h2 {
@@ -347,24 +350,34 @@ h3 {
 }
 
 .popular .accommodations-item {
-    height: 144px;
+    height: 143px;
     width: 100%;
     position: relative;
     flex-direction: row;
     flex-wrap: unset;
+    margin-bottom: 34px;
 }
 
 .popular .accommodations-item img {
     height: 100%;
-    width: 41%;
+    width: 38%;
     max-width: 135px;
     border-radius: 15px 0 0 15px;
+    margin-right: 10px;
+}
+
+.popular .accommodations-item span {
+    margin-top: 10px;
 }
 
 .horizontal-display {
     display: flex;
     flex-direction: column;
     max-width: 193px;
+}
+
+.horizontal-display span {
+    
 }
 
 .popular .accommodations-item .stars {
@@ -377,13 +390,12 @@ h3 {
 
 .activities {
     padding-top: 40px;
-    margin-top: 30px;
+    margin-top: 22px;
 
 }
 
 .activities h2 {
-    margin: 0 0 23px 0px;
-    font-size: 1.375rem;
+    margin: 0 0 20px 0px;
 }
 
 .activities-container {
@@ -393,8 +405,8 @@ h3 {
 }
 
 .activities-item {
-    padding-bottom: 15px;
-    /*border: 1px solid black;*/
+    /*padding-bottom: 15px;
+    border: 1px solid black;*/
     border-radius: 20px;
     background-color: #FFFFFF;
     display: flex;
@@ -412,25 +424,28 @@ h3 {
 }
 
 .activities-item-bottom {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
     border-radius: 0 0 20px 20px;
     width: 100%;
     margin-top: 0;
 }
 
 .activities-item-bottom h3 {
-    margin: 12px 0 0 19px;
+    margin: 0 0 0 19px;
     font-size: 1rem;
 }
 
 .footer {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 60px;
     background-color: #D9D9D9;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-around;
     /*border: 1px solid black; */
-    padding: 77px 46px 10px 54px;
+    padding: 47px 46px 10px 54px;
 }
 
 .column {
@@ -447,6 +462,12 @@ h3 {
 .footer-link {
     display: block;
     margin-bottom: 12px;
+    transition: .3s;
+}
+
+.footer-link:hover {
+    transform: none;
+    text-decoration: underline;
 }
 
 /* break point intermédiaire pour accommodations items */
@@ -460,7 +481,7 @@ h3 {
 
     body {
         /*background: linear-gradient(rgb(255, 255, 255, 0) , rgb(255, 255, 255, 0)), 
-        url(images/Tablette992.jpg) center top no-repeat; */
+        url(images/Tablette992.jpg) center top no-repeat;*/
     }
 
     .main-wrapper {
@@ -530,19 +551,17 @@ h3 {
     }
 
     .activities {
-        margin-top: 52px;
+        margin-top: 45px;
     }
 
     .activities h2 {
-
-        margin-bottom: 42px;
+        margin-bottom: 38px;
         margin-left: 10px
     }
 
     .activities-item {
         width: 21%;
-        padding: 0;
-        
+        padding: 0;  
     }
 
     .activities-item img {
@@ -551,16 +570,11 @@ h3 {
 
     .activities-item-bottom {
         min-height: 58px;
-        display: flex;
-        align-items: center;
-    }
-
-    .activities-item-bottom h3 {
-        margin-top: 0;  
     }
 
     .footer {
-        padding: 85px 28px 10px 49px;
+        margin-top: 68px;
+        padding: 47px 28px 10px 63px;
     }
 }
 /* break point intermédiaire pour les filtres */
@@ -628,7 +642,7 @@ h3 {
 
     body { 
         /*background: linear-gradient(rgb(255, 255, 255, 0) , rgb(255, 255, 255, 0)), 
-        url(images/Mobile.jpg) center top no-repeat; */
+        url(images/Mobile.jpg) center top no-repeat;*/
     }
 
     .main-wrapper {
@@ -755,12 +769,12 @@ h3 {
     .activities {
         padding-left: 20px;
         padding-right: 20px;
-        margin-top: 2px
+        margin-top: 10px;
     }
 
     .activities h2 {
         margin-left: 2px;
-        margin-bottom: 30px;
+        margin-bottom: 27px;
     }
 
     .activities-item img {
@@ -772,7 +786,7 @@ h3 {
     }
 
     .footer {
-        padding: 69px 28px 10px 28px; 
+        padding: 69px 28px 10px 28px;
     }
 
     .column {
@@ -790,7 +804,7 @@ h3 {
 
     .activities-item {
         width: 100%;
-        margin-bottom: 25px;
+        margin-bottom: 24px;
     }
 
 }
