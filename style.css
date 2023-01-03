@@ -30,7 +30,9 @@ a:visited {
     color: black;
 }
 
-a:hover {
+.filter-item:hover,
+.accommodations-item:hover,
+.activities-item:hover {
     transform: scale(1.02); 
 }
 
@@ -260,7 +262,6 @@ h3 {
     justify-content: space-between;
     width: 66%;
     background-color:  #F2F2F2 ;
-    border: 1px solid black;
     padding: 40px;
     border-radius: 20px;
 }
