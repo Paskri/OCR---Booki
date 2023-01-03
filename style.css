@@ -767,11 +767,11 @@ h3 {
     }
 
     .popular {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .popular .accommodations-item {
-        width: 100%;
+        width: 48%;
         margin-bottom: 11px
     }
 
@@ -814,6 +814,10 @@ h3 {
     .activities-item {
         width: 100%;
         margin-bottom: 24px;
+    }
+
+    .popular .accommodations-item {
+        width: 100%;
     }
 
 }
