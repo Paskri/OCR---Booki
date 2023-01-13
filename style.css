@@ -14,7 +14,7 @@ html {
 
 body {
     /*background: linear-gradient(rgb(255, 255, 255, 0) , rgb(255, 255, 255, 0)), 
-    url(images/Desktop1400.jpg) center top no-repeat; */
+    url(images/maquettes/Desktop1400.jpg) center top no-repeat; */
     max-width: 1400px;
     margin: 0 auto;
     color: black
@@ -84,7 +84,6 @@ h3 {
     margin:0;
     border-top: 2px solid transparent;
     transition: color .3s, border .3s;
-    /* next line added to avoid nav-item glitch */
     border-bottom: 0px solid transparent;
 }
 
@@ -272,15 +271,16 @@ h3 {
     flex-wrap: wrap;
 }
 
-.accommodation a {
+.accommodations a {
     display: inline-block;
+    width: 31%;
 }
 
 .accommodations-item {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 31%;
+    width: 100%;
     background-color: #FFFFFF;
     margin-bottom: 35px;
     border-radius: 20px;
@@ -307,13 +307,17 @@ h3 {
     margin: 4px 0 0 10px;
 }
 
-.accommodations-item .stars {
+.stars {
     margin: 5px 0 0px 10px;
     font-size: 0.7rem;  
 }
 
-.accommodations-item .stars i {
+.stars i {
     color: #0065fc; 
+}
+
+.stars i.grey {
+    color: #F2F2F2;
 }
 
 .display-more {
@@ -461,8 +465,8 @@ h3 {
 
 /* intermediate breakpoint for accommodations-items */
 @media screen and (max-width: 1170px){
-    .accommodations-item {
-        width: 48%;
+    .accommodations a {
+        width: 48%
     }
 }
 /* Tablettes */
@@ -470,7 +474,7 @@ h3 {
 
     body {
         /*background: linear-gradient(rgb(255, 255, 255, 0) , rgb(255, 255, 255, 0)), 
-        url(images/Tablette992.jpg) center top no-repeat;*/
+        url(images/maquettes/Tablette992.jpg) center top no-repeat;*/
     }
 
     .main-wrapper {
@@ -494,7 +498,7 @@ h3 {
     }
 
     .search-form input {
-        width: 250px;
+        /*width: 250px;*/
         padding-left: 15px;
     }
 
@@ -519,8 +523,7 @@ h3 {
     .accommodations-container {
         width: 100%;
     }
-
-    .accommodations-item {
+    .accommodations a {
         width: 31%;
     }
 
@@ -535,8 +538,12 @@ h3 {
         justify-content: space-between;
     }
 
+    .popular a {
+        width: 32%;
+    }
+
     .popular .accommodations-item {
-        width: 31%;
+        width: 100%;
     }
 
     .activities {
@@ -583,14 +590,16 @@ h3 {
     .popular {
         flex-wrap: wrap;
     }
-    .popular .accommodations-item {
+    .popular a {
         width: 48%;
+    }
+    .popular .accommodations-item {
+        width: 100%;
    } 
 }
 /* intermediate breakpoint for accommodations-items */
 @media screen and (max-width: 850px){
-
-    .accommodations-item {
+    .accommodations a {
         width: 48%;
     }
 
@@ -600,7 +609,7 @@ h3 {
     }
 
 }
-/* Break point filters tablette -> filters mobile */
+/*Break point for filters tablette to filters mobile*/
 @media screen and (max-width: 800px) {
 
     .search-form {
@@ -640,7 +649,7 @@ h3 {
 
     body { 
         /*background: linear-gradient(rgb(255, 255, 255, 0) , rgb(255, 255, 255, 0)), 
-        url(images/Mobile.jpg) center top no-repeat;*/
+        url(images/maquettes/Mobile375.jpg) center top no-repeat;*/
     }
 
     .main-wrapper {
@@ -695,26 +704,32 @@ h3 {
 
     .search-form {
         margin: 36px 0 20px 2px;
-        max-width: 331px;
-    }
-
-    .search-form i {
-        flex: none;
     }
 
     .search-form input {
-        width: 230px
+        /*width: 230px*/
+        padding: 0px;
+    }
+
+    .search-form input::placeholder {
+        padding: 0;
+        margin: 0;
+    }
+    .search-form input:placeholder-shown {
+        padding: 0;
+        margin: 0;
     }
 
     .search-form button {
         padding: 0;
+        width: 50px;
     }
 
     .button i {
         display: flex;
         background: none;
-        
         border-radius: 0;
+        width: unset;
     }
 
     .button span {
@@ -759,9 +774,11 @@ h3 {
     .popular {
         flex-wrap: wrap;
     }
-
-    .popular .accommodations-item {
+    .popular a {
         width: 48%;
+    }
+    .popular .accommodations-item {
+        width: 100%;
         margin-bottom: 11px
     }
 
@@ -778,6 +795,8 @@ h3 {
 
     .activities-item img {
         height: 135px;
+        width: 100%;
+        margin-bottom: 24px;
     }
 
     .activities-item-bottom {
@@ -797,13 +816,18 @@ h3 {
 /* intermediate breakpoint for accommodations-items */
 @media screen and (max-width: 570px){
 
-    .accommodations-item {
-        width: 100%;
+
+    .accommodations a {
+        width: 100%
     }
 
     .activities-item {
         width: 100%;
         margin-bottom: 24px;
+    }
+
+    .popular a {
+        width: 100%;
     }
 
     .popular .accommodations-item {
