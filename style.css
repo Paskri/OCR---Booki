@@ -55,10 +55,6 @@ h3 {
     line-height: 1.173rem;
 }
 
-.main-wrapper {
-    padding: 0 30px;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -90,6 +86,10 @@ h3 {
 .nav-item:hover {
     color: #0065FC;
     border-top: 2px solid #0065FC;
+}
+
+.main-wrapper {
+    padding: 0 30px;
 }
 
 .main-title {
@@ -158,7 +158,7 @@ h3 {
     margin: 0 0 0 12px
 }
 
-.filters-list h3 {
+.filters-list h2 {
     font-size: 1.125rem;
     margin: 0;
     line-height: 1rem;
@@ -382,17 +382,14 @@ h3 {
 }
 
 .popular .accommodations-item .stars {
-    margin: 0;
     position: absolute;
     bottom: 0px;
-    margin-bottom: 8px;
-    margin-left: 13px;
+    margin: 0 0 8px 13px;
 }
 
 .activities {
     padding-top: 40px;
     margin-top: 22px;
-
 }
 
 .activities h2 {
@@ -438,8 +435,14 @@ h3 {
 
 .footer {
     width: 100%;
-    margin-top: 60px;
-    background-color: #D9D9D9;
+    padding: 0 30px;
+    margin: 60px 0 0 0;
+    
+}
+
+.footer-container {
+    width : 100%;  
+    background-color: #F2F2F2;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -471,8 +474,23 @@ h3 {
 /* intermediate breakpoint for accommodations-items */
 @media screen and (max-width: 1170px){
     .accommodations a {
-        width: 48%
+        width: 32%;
     }
+    .accommodations-container {
+        padding: 40px 15px;
+    }
+    .popular-container {
+        padding: 40px 15px;
+    }
+    .horizontal-display h3,
+    .horizontal-display span {
+        margin-left: 0;
+    }
+
+    .popular .accommodations-item .stars {
+        margin-left: 0;
+    }
+        
 }
 /* Tablettes */
 @media screen and (max-width: 992px) {
@@ -512,7 +530,7 @@ h3 {
         margin: 0 0 0 0px;
     }
 
-    .filters-list h3 {
+    .filters-list h2 {
         width: 8%;
     }
 
@@ -527,6 +545,7 @@ h3 {
 
     .accommodations-container {
         width: 100%;
+        padding: 40px;
     }
     .accommodations a {
         width: 31%;
@@ -535,6 +554,7 @@ h3 {
     .popular-container {
         width: 100%;
         margin-top: 54px;
+        padding: 40px;
     }
 
     .popular {
@@ -575,77 +595,56 @@ h3 {
 
     .footer {
         margin-top: 68px;
+        padding: 0 56px
+        
+    }
+    .footer-container {
         padding: 47px 28px 10px 63px;
     }
 }
 /* intermediate breakpoint for filters */
 @media screen and (max-width: 930px) {
 
-    .filters-list h3 {
-        width: 100%
-    }
     .filters-container {
-        width: 100%;
         padding: 0;
     }
 
-}
+    .filters-container {
+        width: 91%;
+    }
+    .filter-container h2 {
+        margin-right: 5px;
+    }
+} 
 /* intermediate breakpoint for popular-accommodation-items */
 @media screen and (max-width: 880px) {
     .popular {
         flex-wrap: wrap;
     }
     .popular a {
-        width: 48%;
+        width: 32%;
     }
-    .popular .accommodations-item {
-        width: 100%;
-   } 
+    .popular .accommodations-item img {
+        margin-right: 5px;
+    }
 }
 /* intermediate breakpoint for accommodations-items */
 @media screen and (max-width: 850px){
-    .accommodations a {
-        width: 48%;
-    }
 
     .activities-item {
-        width: 48%;
         margin-bottom: 30px;
     }
-
-}
-/*Break point for filters tablette to filters mobile*/
-@media screen and (max-width: 800px) {
-
-    .search-form {
-        margin-bottom: 20px;
-    }
-
-    .filters-container {
-        flex-wrap: wrap;
-    }
-
-    .filters-list h3 {
-        height: 50px;
-    }
-
-    .filter-item {
-        margin-bottom: 18px;
-        width: 160px;
-    }
-
-    .filter-item a {
-        width: 160px;
-    }
-
     .filter-item .text-content {
-        font-size: 0.6875rem;
-        padding: 0;
+        font-size: 0.875rem;
     }
-
-    .info {
-        margin-top: 22px;
-        display: flex;
+    .filter-item i {
+        width: 40px
+    }
+    .accommodations-container {
+        padding: 40px 15px;
+    }
+    .popular-container {
+        padding: 40px 15px
     }
 
 }
@@ -699,7 +698,7 @@ h3 {
 
     .main-title {
         margin: 32px 20px 12px 0px;
-        line-height: 25.82px;
+        line-height: 1.625rem;
     }
 
     .subtitle {
@@ -713,7 +712,7 @@ h3 {
 
     .search-form input {
         /*width: 230px*/
-        padding: 0px;
+        padding: 0;
     }
 
     .search-form input::placeholder {
@@ -745,6 +744,33 @@ h3 {
         max-width: 350px;
     }
 
+    .filters-list h2 {
+        width: 100%;
+        height: 50px;
+    }
+    .filters-container {
+        flex-wrap: wrap;
+    }
+
+    .filter-item {
+        margin-bottom: 18px;
+        width: 160px;
+    }
+
+    .filter-item a {
+        width: 160px;
+    }
+
+    .filter-item .text-content {
+        font-size: 0.6875rem;
+        padding: 0;
+    }
+
+    .info {
+        margin-top: 22px;
+        display: flex;
+    }
+
     .text-content i.big {
         font-size: 1.125rem;
         width: 39px;
@@ -765,7 +791,9 @@ h3 {
         background-color: #FFFFFF;
         margin-top: 12px;
     }
-
+    .accommodations a {
+        width: 100%;
+    }
     .accommodations-item {
         margin-bottom: 15px;
         background-color: #FFFFFF;
@@ -774,13 +802,14 @@ h3 {
     .popular-container {
         margin-top: 10px;
         padding: 30px 20px 32px 20px;
+        border-radius: 0;
     }
 
     .popular {
         flex-wrap: wrap;
     }
     .popular a {
-        width: 48%;
+        width: 100%;
     }
     .popular .accommodations-item {
         width: 100%;
@@ -788,8 +817,7 @@ h3 {
     }
 
     .activities {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
         margin-top: 10px;
     }
 
@@ -797,7 +825,9 @@ h3 {
         margin-left: 2px;
         margin-bottom: 27px;
     }
-
+    .activities-item {
+        width: 100%;
+    }
     .activities-item img {
         height: 135px;
         width: 100%;
@@ -808,34 +838,15 @@ h3 {
     }
 
     .footer {
+        padding: 0 20px
+    }
+    .footer-container {
         padding: 69px 28px 10px 28px;
     }
 
     .column {
         width: 100%;
 
-    }
-
-}
-/* intermediate breakpoint for accommodations-items */
-@media screen and (max-width: 570px){
-
-
-    .accommodations a {
-        width: 100%
-    }
-
-    .activities-item {
-        width: 100%;
-        margin-bottom: 24px;
-    }
-
-    .popular a {
-        width: 100%;
-    }
-
-    .popular .accommodations-item {
-        width: 100%;
     }
 
 }
