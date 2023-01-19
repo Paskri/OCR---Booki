@@ -463,7 +463,9 @@ h3 {
 	padding-bottom: 35px;
 }
 
-.column h3 {
+.column h2 {
+	font-size: 1rem;
+	line-height: 1.173rem;
 	margin-bottom: 21px;
 }
 
